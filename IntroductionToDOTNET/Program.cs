@@ -1,4 +1,5 @@
 ﻿//#define CONSOLE
+//#define NAME
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace IntroductionToDOTNET
             Console.WriteLine("Another position");
             Console.ResetColor(); 
 #endif
+#if NAME
 			Console.Write("Введите ваше Имя: ");
 			string firstName = Console.ReadLine();
 
@@ -39,7 +41,51 @@ namespace IntroductionToDOTNET
 			Console.WriteLine(String.Format("{0} {1} {2}", lastName, firstName, age)); // Форматирование строк
 			Console.WriteLine($"{lastName} {firstName} {age}"); // Интерполяция строк
 
+#endif
 
+			for (int rows = 0; rows < 8; rows++)
+			{
+				for (int cols = 0; cols < 8; cols++)
+				{
+					Console.Write(rows % 2 == cols % 2 ? "* " : "* ");
+				}
+				Console.WriteLine();
+			}
+				Console.WriteLine();
+
+
+
+			for (int rows = 0; rows < 8; rows++)
+			{
+				for (int cols = 0; cols < 8; cols++)
+				{
+					Console.Write(rows % 2 == cols % 2 ? "- " : "+ ");
+				}
+				Console.WriteLine();
+
+			}	
+			    Console.WriteLine();
+
+			for (int i = 0; i < 8; i++)
+			{
+				for (int rows = 0; rows < 8; rows++)
+				{
+					for (int cols = 0; cols < 5; cols++)
+					{
+						for (int k = 0; k < 8; k++)
+						{
+							if (i % 2 == cols % 2)
+
+								Console.Write("* ");
+
+							else
+
+								Console.Write("  ");
+						}
+					}
+					Console.WriteLine();
+				}
+			}
 		}
 	}
 }
